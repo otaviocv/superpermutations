@@ -1,15 +1,6 @@
-package example
+package basics
 
-object Hello extends App {
-
-  val someSet:Set[String] = dummyNthSet(4)
-  val somePerms:Set[String] = permutations(someSet)
-
-  somePerms.map(x => {
-    somePerms.map(y => {
-      println("(" + x + ", " + y + "): " + appendDistance(x, y).toString)
-    })
-  })
+object Basics {
 
   def appendDistance(u:String, v:String): Int = {
     def rAppend(u:String, v:String, acc:Int):Int = {
